@@ -7,7 +7,7 @@ interface FlexboxComponentProps {
 
 const FlexboxComponent: React.FC<FlexboxComponentProps> = ({ children, direction = 'row' }) => {
   return (
-    <div className={`flex flex-${direction} gap-4`}>
+    <div className={`relative flex flex-${direction} gap-4`}>
       {children}
     </div>
   );

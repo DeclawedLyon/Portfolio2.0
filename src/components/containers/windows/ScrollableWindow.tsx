@@ -8,7 +8,7 @@ const ScrollableWindow = ({
   children
 }: IScrollableWindowProps) => {
   return (
-    <div className='flex flex-col border-2 border-black w-full h-full overflow-y-scroll overflow-x-hidden'>
+    <div className={`relative flex flex-col border-2 border-black w-full h-full overflow-y-scroll overflow-x-hidden`}>
       {children}
     </div>
   )

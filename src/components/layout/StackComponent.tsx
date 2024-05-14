@@ -7,7 +7,7 @@ interface StackComponentProps {
 
 const StackComponent: React.FC<StackComponentProps> = ({ children, spacing = 4 }) => {
   return (
-    <div className={`space-y-${spacing}`}>
+    <div className={`relative space-y-${spacing}`}>
       {children}
     </div>
   );

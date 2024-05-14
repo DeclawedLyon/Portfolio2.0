@@ -22,7 +22,7 @@ function App() {
         <AppLayout>
           <ScrollableWindow>
             
-          <FullScreenwindow>
+          <FullScreenwindow marginTopDisabled>
             <div>TEST</div>
             <div>TEST</div>
             <div>TEST</div>

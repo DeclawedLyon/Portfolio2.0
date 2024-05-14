@@ -7,7 +7,7 @@ interface GridComponentProps {
 
 const GridComponent: React.FC<GridComponentProps> = ({ children, columns = 3 }) => {
   return (
-    <div className={`grid grid-cols-${columns} gap-4`}>
+    <div className={`relative grid grid-cols-${columns} gap-4`}>
       {children}
     </div>
   );

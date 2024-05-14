@@ -4,9 +4,17 @@ interface IFullScreenWindowProps {
   children: ReactNode;
   weight?: 'left' | 'right' | 'center';
   windowStyles?: string;
+  marginTopDisabled?: boolean;
+  marginBottomDisabled?: boolean;
 }
 
-const FullScreenwindow: React.FC<IFullScreenWindowProps> = ({ children, weight = 'center' }) => {
+const FullScreenwindow: React.FC<IFullScreenWindowProps> = ({ 
+  children, 
+  weight = 'center',
+  windowStyles,
+  marginTopDisabled,
+  marginBottomDisabled
+}) => {
   const alignmentClass = {
     left: 'items-start pl-10',
     center: 'items-center',
@@ -14,7 +22,7 @@ const FullScreenwindow: React.FC<IFullScreenWindowProps> = ({ children, weight =
   }[weight]
   
   return (
-    <div className={`w-full h-screen flex flex-col justify-center ${alignmentClass}`}>
+    <div className={`relative w-full bg-slate-600 h-screen flex flex-col justify-center ${alignmentClass} ${windowStyles} ${marginTopDisabled || 'mt-2'} ${marginBottomDisabled || 'mb-2'}`}>
       {children}
     </div>
   );
