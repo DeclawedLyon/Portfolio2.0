@@ -6,6 +6,8 @@ import useVisualMode from './utils/hooks/useVisualMode';
 import AppLayout from './components/layout/AppLayout';
 import FullScreenwindow from './components/containers/windows/FullScreenWindow';
 import ScrollableWindow from './components/containers/windows/ScrollableWindow';
+import SplitScreen from './components/layout/screen_layout/SplitScreen';
+import GridComponent from './components/layout/GridComponent';
 
 
 
@@ -36,38 +38,39 @@ function App() {
 
           </FullScreenwindow>
           <FullScreenwindow weight='left'>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-
+            <SplitScreen>
+              <>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+              </>
+              <>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+                <div>TEST2222</div>
+              </>
+            </SplitScreen>
           </FullScreenwindow>
           <FullScreenwindow weight='right'>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-            <div>TEST2222</div>
-
+            <GridComponent columns={3} padding={4}>
+              <div className='flex items-center justify-center border-2 border-black'>Test3333</div>
+              <div className='flex items-center justify-center border-2 border-black'>Test3333</div>
+              <div className='flex items-center justify-center border-2 border-black'>Test3333</div>
+              <div className='flex items-center justify-center border-2 border-black'>Test3333</div>
+              <div className='flex items-center justify-center border-2 border-black'>Test3333</div>
+              <div className='flex items-center justify-center border-2 border-black'>Test3333</div>
+              <div className='flex items-center justify-center border-2 border-black'>Test3333</div>
+              <div className='flex items-center justify-center border-2 border-black'>Test3333</div>
+              <div className='flex items-center justify-center border-2 border-black'>Test3333</div>
+            </GridComponent>
           </FullScreenwindow>
           </ScrollableWindow>
           {/* <FullscreenCard>
