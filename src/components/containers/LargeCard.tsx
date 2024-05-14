@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface LargeCardProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const LargeCard: React.FC<LargeCardProps> = ({ children }) => {

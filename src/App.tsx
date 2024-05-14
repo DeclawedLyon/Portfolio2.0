@@ -1,33 +1,85 @@
-import React from 'react';
 import './globals.css'
 
-import { solid, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useVisualMode from './utils/hooks/useVisualMode';
 import AppLayout from './components/layout/AppLayout';
-import LargeCard from './components/containers/LargeCard';
-import SmallCard from './components/containers/SmallCard';
+import FullScreenwindow from './components/containers/windows/FullScreenWindow';
+import ScrollableWindow from './components/containers/windows/ScrollableWindow';
 
 
 
 function App() {
   const { 
     mode, 
-    transition, 
-    back 
+    // transition, 
+    // back 
   } = useVisualMode('LOGIN')
 
   return (
     <div>
       {mode === 'LOGIN' && (
         <AppLayout>
+          <ScrollableWindow>
+            
+          <FullScreenwindow>
+            <div>TEST</div>
+            <div>TEST</div>
+            <div>TEST</div>
+            <div>TEST</div>
+            <div>TEST</div>
+            <div>TEST</div>
+            <div>TEST</div>
+            <div>TEST</div>
+            <div>TEST</div>
+            <div>TEST</div>
+
+          </FullScreenwindow>
+          <FullScreenwindow weight='left'>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+
+          </FullScreenwindow>
+          <FullScreenwindow weight='right'>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+            <div>TEST2222</div>
+
+          </FullScreenwindow>
+          </ScrollableWindow>
+          {/* <FullscreenCard>
           <>Login</>
-          <LargeCard>
+
+          </FullscreenCard> */}
+          {/* <LargeCard>
             <FontAwesomeIcon icon={solid('bars')}/>
           </LargeCard>
           <SmallCard>
             <FontAwesomeIcon icon={solid('bars')}/>
-          </SmallCard>
+          </SmallCard> */}
         </AppLayout>  
       )}
       {mode === 'LOGGED_IN' && (
