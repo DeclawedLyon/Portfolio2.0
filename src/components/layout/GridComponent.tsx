@@ -1,4 +1,3 @@
-// GridComponent.tsx
 import React from 'react';
 
 interface GridComponentProps {
