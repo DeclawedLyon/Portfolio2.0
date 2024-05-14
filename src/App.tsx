@@ -1,10 +1,11 @@
 import React from 'react';
 import './globals.css'
 
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { solid, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useVisualMode from './utils/hooks/useVisualMode';
 import AppLayout from './components/layout/AppLayout';
+import LargeCard from './components/containers/LargeCard';
 
 
 
@@ -13,14 +14,23 @@ function App() {
     mode, 
     transition, 
     back 
-  } = useVisualMode('APP')
+  } = useVisualMode('LOGIN')
 
   return (
     <div>
       {mode === 'LOGIN' && (
         <AppLayout>
-
+          <>Login</>
+          <LargeCard>
+            <FontAwesomeIcon icon={solid('bars')}/>
+          </LargeCard>
         </AppLayout>  
+      )}
+      {mode === 'LOGGED_IN' && (
+        <AppLayout>
+          <>Loggen In</>
+          <FontAwesomeIcon icon={solid('comment-sms')}/>
+        </AppLayout>
       )}
     </div>
   );
