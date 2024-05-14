@@ -1,6 +1,10 @@
 import React from 'react';
 import './globals.css'
 
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
 function App() {
   return (
     <div className="App">
